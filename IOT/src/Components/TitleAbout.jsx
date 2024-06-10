@@ -3,7 +3,7 @@ import '../Styles/TitleAbout.css'
 const TitleAbout = () => {
   return (
     <div className="title-about">
-      <h1> Microservice and Nanoservice Solutions for the IoT-Edge-Cloud Continuum</h1>
+      <h1>DNS over HTTPS: Status, Challenges, Use Cases, and Open Issues</h1>
       {/* <p>About the Title</p> */}
     </div>
   );
