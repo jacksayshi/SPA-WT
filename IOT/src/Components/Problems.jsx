@@ -1,36 +1,4 @@
 
-// import React from 'react';
-// import '../Styles/Problems.css';  // Ensure the CSS is properly linked
-
-// const Problems = () => {
-//   const problemData = [
-//     { id: 1, title: 'Problem 1', description: 'Description of Problem 1.', solutions: ['Solution 1', 'Solution 2'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     { id: 2, title: 'Problem 2', description: 'Description of Problem 2.', solutions: ['Solution 3'] },
-//     // Add up to 50 problems as needed
-//   ];
-
-//   return (
-//     <div className="problems-container">
-//       {problemData.map((problem) => (
-//         <div key={problem.id} className="problem-card">
-//           <h3>{problem.title}</h3>
-//           <p>{problem.description}</p>
-//           {problem.solutions.map((solution, index) => (
-//             <a key={index} href="#">{solution}</a>  
-//           ))}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Problems;
 
 
 import React from 'react';
