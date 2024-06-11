@@ -41,8 +41,8 @@ Group Members and Roles
 -   **Ashwin Pawar** - **Developer**: Professional who creates, tests, and maintains software applications.
 -   **Bharat bandlamudi** - **Reporting and Delivery**: managing the processes of collecting, analyzing, and disseminating information to ensure timely and accurate communication of data and project statuses.
 -   **Puneeth chowdary** - **Developer**: Professional who creates, tests, and maintains software applications.
--   **Sowmmya mutya** - **Coordinates Scientific content**:  managing, organizing, and ensuring the accuracy and consistency of scientific information for documentation and publication.
--   **Santhosh** - **Reporting and Delivery**: managing the processes of collecting, analyzing, and disseminating information to ensure timely and accurate communication of data and project statuses.
+-   **Sowmya mutya** - **Coordinates Scientific content**:  managing, organizing, and ensuring the accuracy and consistency of scientific information for documentation and publication.
+-   **Santosh** - **Reporting and Delivery**: managing the processes of collecting, analyzing, and disseminating information to ensure timely and accurate communication of data and project statuses.
 -   **Sai Joshika** - **Coordinates Scientific content** :  managing, organizing, and ensuring the accuracy and consistency of scientific information for documentation and publication.
 
 
