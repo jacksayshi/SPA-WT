@@ -1,0 +1,42 @@
+.team-members {
+    position: relative;
+  }
+  
+  .popup {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1000;
+    animation: popupFadeIn 0.3s ease-in-out forwards;
+  }
+  
+  .popup-content {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  @keyframes popupFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
