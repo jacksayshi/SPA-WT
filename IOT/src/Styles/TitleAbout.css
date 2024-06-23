@@ -1,17 +1,20 @@
-.title-about {
+
+
+  .title-about {
+
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    margin-top: 60px;  
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: -webkit-sticky;
-    position: sticky;
-    top: 60px;
-    z-index: 1000; 
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
   }
   
   .title-about h1 {
-    color: #0077cc;
+    color: #333;
     margin-bottom: 10px;
-    font-size:x-large;
-  } 
+  }
+  
+  .title-about p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
