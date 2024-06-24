@@ -194,6 +194,15 @@ function App() {
                   section2: "-----------------.",
                   section3: "-----------------"
                 },
+                {
+                  id: 20,
+                  title: "Summary of DNS over HTTPS Abuse",
+                  description: "-----------------",
+                  category: "Machine Learning models",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
 
 
   ];

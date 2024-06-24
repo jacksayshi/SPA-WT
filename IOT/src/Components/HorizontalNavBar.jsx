@@ -20,7 +20,7 @@ const HorizontalNavBar = ({ onCategorySelect }) => {
       <div className="dropdown">
         <a href="#">Methodologies</a>
         <div className="dropdown-content">
-          <a href="#" onClick={() => onCategorySelect('Machine Learning Analysis and Data Gathering')}>System Implementation</a>
+          <a href="#" onClick={() => onCategorySelect('Machine Learning Analysis and Data Gathering')}>Machine Learning Analysis and Data Gathering</a>
           <a href="#" onClick={() => onCategorySelect('Data Gathering and Analysis')}>Data Gathering and Analysis</a>
           <a href="#" onClick={() => onCategorySelect('Data Collection and Analysis for DNS Operational Issues')}>Data Collection and Analysis for DNS Operational Issues</a>
           <a href="#" onClick={() => onCategorySelect('Performance Data Collection and Comparative Analysis')}>Performance Data Collection and Comparative Analysis</a>
