@@ -1,221 +1,4 @@
 
-// import React, { useState } from 'react';
-// import SideNavbar from './Components/SideNavBar1';
-// import Problems from './Components/Problems';
-// import Footer from './Components/Footer';
-// import TitleAbout from './Components/TitleAbout';
-// import TeamMembers from './Components/TeamMembers';
-// import './App.css';
-
-// function App() {
-//   const [selectedProblem, setSelectedProblem] = useState(null);
-
-  
- 
-//   const problems = [
-//     {
-//       id: 1,
-//       title: "DNS over HTTPS Implementation",
-//       description: "Implementing DNS over HTTPS (DoH) to enhance privacy and security in DNS resolution.",
-//       section1: "DoH encrypts DNS queries to protect against eavesdropping and manipulation. This section discusses the technical aspects of implementing DoH, including protocol specifications and server-side configurations.",
-//       section2: "Challenges in DoH adoption include potential centralization of DNS and the need for client-side support. This section explores these issues and potential solutions.",
-//       section3: "Future developments in DoH, such as integration with DNSSEC and performance optimizations, are discussed in this section."
-//     },
-//     {
-//       id: 2,
-//       title: "Quantum-Resistant Cryptography",
-//       description: "Developing cryptographic algorithms resistant to attacks from quantum computers.",
-//       section1: "This section introduces the concept of post-quantum cryptography and its importance in maintaining security in a future with powerful quantum computers.",
-//       section2: "Various approaches to quantum-resistant cryptography are discussed, including lattice-based, hash-based, and code-based cryptography.",
-//       section3: "The challenges of implementing and standardizing quantum-resistant algorithms are explored, including performance considerations and backward compatibility issues."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applicationsThis section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-//     {
-//       id: 3,
-//       title: "AI-Powered Network Intrusion Detection",
-//       description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-//       section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-//       section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-//       section3: "Real-world case studies and future directions for AI in network security are explored in this section."
-//     },
-    
-
-//     // Add more problems as needed to reach 50
-//   ];
-
-//   return (
-//     <div className="app">
-//       <div className="content-wrapper">
-//         <SideNavbar problems={problems} onSelectProblem={setSelectedProblem} />
-//         <main className="main-content">
-//           <TitleAbout />
-//           <Problems 
-//             problems={problems} 
-//             selectedProblem={selectedProblem} 
-//             onSelectProblem={setSelectedProblem}
-//           />
-//         </main>
-//       </div>
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import React, { useState } from 'react';
 import SideNavbar from './Components/SideNavBar1';
 import Problems from './Components/Problems';
@@ -229,47 +12,200 @@ function App() {
   const [filteredProblems, setFilteredProblems] = useState([]);
   
   const problems = [
-    // ... (your existing problem data)
+   
     
                 {
                   id: 1,
-                  title: "DNS over HTTPS Implementation",
-                  description: "Implementing DNS over HTTPS (DoH) to enhance privacy and security in DNS resolution.",
-                  category: "optimization theory",
-                  section1: "DoH encrypts DNS queries to protect against eavesdropping and manipulation. This section discusses the technical aspects of implementing DoH, including protocol specifications and server-side configurations.",
-                  section2: "Challenges in DoH adoption include potential centralization of DNS and the need for client-side support. This section explores these issues and potential solutions.",
-                  section3: "Future developments in DoH, such as integration with DNSSEC and performance optimizations, are discussed in this section."
+                  title: "Privacy of DNS-over-HTTPS: Requiem for a Dream?",
+                  description: "-----------------",
+                  category: "Machine Learning models",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
                 },
                 {
                   id: 2,
-                  title: "Quantum-Resistant Cryptography",
-                  description: "Developing cryptographic algorithms resistant to attacks from quantum computers.",
-                  category: "control theory",
-                  section1: "This section introduces the concept of post-quantum cryptography and its importance in maintaining security in a future with powerful quantum computers.",
-                  section2: "Various approaches to quantum-resistant cryptography are discussed, including lattice-based, hash-based, and code-based cryptography.",
-                  section3: "The challenges of implementing and standardizing quantum-resistant algorithms are explored, including performance considerations and backward compatibility issues."
+                  title: "A large-scale analysis of HTTPS deployments: Challenges, solutions, and recommendations",
+                  description: "-----------------",
+                  category: "Improve security of HTTPS",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
                 },
                 {
                   id: 3,
-                  title: "AI-Powered Network Intrusion Detection",
-                  description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-                  category: "reinforcement learning",
-                  section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-                  section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-                  section3: "Real-world case studies and future directions for AI in network security are explored in this section."
+                  title: "A Comprehensive Study of DNS Operational Issues by Mining DNS Forums",
+                  description: "-----------------",
+                  category: "Understand Root causes of DNS failure and provide suggestions, Privacy laws",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
                 },
                 {
-                  id: 3,
-                  title: "AI-Powered Network Intrusion Detection",
-                  description: "Utilizing artificial intelligence to enhance network intrusion detection systems.",
-                  category: "theoretical analysis",
-                  section1: "This section covers the basics of AI-powered intrusion detection, including machine learning algorithms suitable for network security applications.",
-                  section2: "The advantages and potential drawbacks of AI in intrusion detection are discussed, such as improved accuracy and the risk of adversarial attacks on the AI itself.",
-                  section3: "Real-world case studies and future directions for AI in network security are explored in this section."
+                  id: 4,
+                  title: "Empirically understanding the global impact of migration to DNS-over-HTTPS",
+                  description: "-----------------",
+                  category: "Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
                 },
+                {
+                  id: 5,
+                  title: "DNS-BC: Fast, Reliable and Secure Domain Name System Caching System Based on a Consortium Blockchain",
+                  description: "-----------------",
+                  category: "DNS future scope",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 6,
+                  title: "Summary of DNS over HTTPS Abuse",
+                  description: "-----------------",
+                  category: "Policy recommendations",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 7,
+                  title: "DoH Insight: detecting DNS over HTTPS by machine learning",
+                  description: "-----------------",
+                  category: "Machine Learning models",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 8,
+                  title: "How DNS over HTTPS is Reshaping Privacy, Performance, and Policy in the Internet Ecosystem",
+                  description: "-----------------",
+                  category: "Policy recommendations",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 9,
+                  title: "Measuring DNS-over-HTTPS Performance Around the World",
+                  description: "-----------------",
+                  category: "Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 10,
+                  title: "A Comprehensive Study of DNS-over-HTTPS Downgrade Attack",
+                  description: "-----------------",
+                  category: "Understand Root causes of DNS failure and provide suggestions, Privacy laws",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 11,
+                  title: "A Comprehensive Study of DNS-over-HTTPS Downgrade Attack",
+                  description: "-----------------",
+                  category: "Security and Attack Analysis",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 12,
+                  title: "DNS-BC: Fast, Reliable and Secure Domain Name System Caching System Based on a Consortium Blockchain",
+                  description: "-----------------",
+                  category: "System Design and Implementation with Experimental Evaluation",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 13,
+                  title: "How DNS over HTTPS is Reshaping Privacy, Performance, and Policy in the Internet Ecosystem",
+                  description: "-----------------",
+                  category: "Performance Data Collection and Comparative Analysis",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 14,
+                  title: "Measuring DNS-over-HTTPS Performance Around the World",
+                  description: "-----------------",
+                  category: "Performance Data Collection and Comparative Analysis",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 15,
+                  title: "A Comprehensive Study of DNS Operational Issues by Mining DNS Forums",
+                  description: "-----------------",
+                  category: "Data Collection and Analysis for DNS Operational Issues",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 16,
+                  title: "Summary of DNS over HTTPS Abuse",
+                  description: "-----------------",
+                  category: "Data Collection and Analysis for DNS Operational Issues",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 17,
+                  title: "A large-scale analysis of HTTPS deployments: Challenges, solutions, and recommendations",
+                  description: "-----------------",
+                  category: "Data Gathering and Analysis",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 18,
+                  title: "Empirically understanding the global impact of migration to DNS-over-HTTPS",
+                  description: "-----------------",
+                  category: "Data Gathering and Analysis",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 19,
+                  title: "Privacy of DNS-over-HTTPS: Requiem for a Dream?",
+                  description: "-----------------",
+                  category: "Machine Learning Analysis and Data Gathering",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+                {
+                  id: 20,
+                  title: "DoH Insight: detecting DNS over HTTPS by machine learning",
+                  description: "-----------------",
+                  category: "Machine Learning Analysis and Data Gathering",
+                  section1: "-----------------",
+                  section2: "-----------------.",
+                  section3: "-----------------"
+                },
+
+
   ];
 
- 
+  const uniqueProblems = (problems) => {
+    const seen = new Set();
+    return problems.filter(problem => {
+      const duplicate = seen.has(problem.title);
+      seen.add(problem.title);
+      return !duplicate;
+    });
+  };
   const handleCategorySelect = (category) => {
     if (category === 'home') {
       setFilteredProblems([]);
@@ -284,11 +220,11 @@ function App() {
     <div className="app">
       <HorizontalNavBar onCategorySelect={handleCategorySelect} />
       <div className="content-wrapper">
-        <SideNavbar problems={problems} onSelectProblem={setSelectedProblem} />
+      <SideNavbar problems={uniqueProblems(problems)} onSelectProblem={setSelectedProblem} />
         <main className="main-content">
           <TitleAbout />
           <Problems 
-            problems={filteredProblems.length ? filteredProblems : problems} 
+            problems={filteredProblems.length ? filteredProblems : uniqueProblems(problems)} 
             selectedProblem={selectedProblem} 
             onSelectProblem={setSelectedProblem}
           />

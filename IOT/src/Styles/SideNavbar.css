@@ -1,4 +1,5 @@
 .side-navbar {
+    max-width: 400px;
     background-color: #33373b;
     padding: 20px;
     height: 100vh;
@@ -25,8 +26,9 @@
     padding: 10px 0;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    border-bottom: 1px solid #004494; /* Adding underline */
+    border-bottom: 1px solid #004494; 
     text-decoration: underline;
+    
   }
   
   .side-navbar li a {
@@ -38,4 +40,6 @@
     background-color: #004494;
     color: #ffd700;
   }
-  
+
+
+   

@@ -15,7 +15,7 @@
 .main-content {
   flex: 1;
   padding: 20px;
-  margin-left: 350px; /* Match the width of the side navbar */
+  margin-left: 400px; /* Match the width of the side navbar */
   overflow-y: auto;
 }
 

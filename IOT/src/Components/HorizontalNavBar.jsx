@@ -9,18 +9,23 @@ const HorizontalNavBar = ({ onCategorySelect }) => {
       <div className="dropdown">
         <a href="#">Solutions</a>
         <div className="dropdown-content">
-          <a href="#" onClick={() => onCategorySelect('optimization theory')}>Optimization Theory</a>
-          <a href="#" onClick={() => onCategorySelect('control theory')}>Control Theory</a>
-          <a href="#" onClick={() => onCategorySelect('reinforcement learning')}>Reinforcement Learning</a>
+          <a href="#" onClick={() => onCategorySelect('Machine Learning models')}>Machine Learning models</a>
+          <a href="#" onClick={() => onCategorySelect('Improve security of HTTPS')}>Improve security of HTTPS</a>
+          <a href="#" onClick={() => onCategorySelect('Understand Root causes of DNS failure and provide suggestions, Privacy laws')}>Understand Root causes of DNS failure and provide suggestions, Privacy laws</a>
+          <a href="#" onClick={() => onCategorySelect('Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53')}>Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53</a>
+          <a href="#" onClick={() => onCategorySelect('DNS future scope')}>DNS future scope</a>
+          <a href="#" onClick={() => onCategorySelect('Policy recommendations')}>Policy recommendations </a>
         </div>
       </div>
       <div className="dropdown">
         <a href="#">Methodologies</a>
         <div className="dropdown-content">
-          <a href="#" onClick={() => onCategorySelect('system implementation')}>System Implementation</a>
-          <a href="#" onClick={() => onCategorySelect('theoretical analysis')}>Theoretical Analysis</a>
-          <a href="#" onClick={() => onCategorySelect('measurement study')}>Measurement Study</a>
-          <a href="#" onClick={() => onCategorySelect('simulations vs emulation vs real prototype')}>Simulations vs Emulation vs Real Prototype</a>
+          <a href="#" onClick={() => onCategorySelect('Machine Learning Analysis and Data Gathering')}>System Implementation</a>
+          <a href="#" onClick={() => onCategorySelect('Data Gathering and Analysis')}>Data Gathering and Analysis</a>
+          <a href="#" onClick={() => onCategorySelect('Data Collection and Analysis for DNS Operational Issues')}>Data Collection and Analysis for DNS Operational Issues</a>
+          <a href="#" onClick={() => onCategorySelect('Performance Data Collection and Comparative Analysis')}>Performance Data Collection and Comparative Analysis</a>
+          <a href="#" onClick={() => onCategorySelect('System Design and Implementation with Experimental Evaluation')}>System Design and Implementation with Experimental Evaluation</a>
+          <a href="#" onClick={() => onCategorySelect('Security and Attack Analysis')}>Security and Attack Analysis</a>
         </div>
       </div>
     </div>
