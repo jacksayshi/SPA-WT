@@ -50,43 +50,83 @@ function App() {
     {
       id: 1,
       title: "Privacy of DNS-over-HTTPS: Requiem for a Dream?",
-      description: "----------------------",
+      description: "https://ieeexplore.ieee.org/abstract/document/9581227",
       category: "Machine Learning models",
-      section1: "-----------------",
-      section2: "-----------------.",
-      section3: "-----------------",
+      section1:
+        "The primary problem addressed in the paper is the potential privacy implications of DNS-over-HTTPS (DoH) traffic. The concern is that network adversaries, such as authoritarian ISPs, may attempt to differentiate DoH packets from regular encrypted Web traffic to monitor or censor users' online activities. The goal is to investigate whether DoH traffic can be accurately identified and propose countermeasures to protect user privacy.",
+      section2:
+        "The researchers develop a machine learning-based identification model that can differentiate DoH packets from encrypted Web packets with high accuracy. To counter this identification model, they propose padding techniques that manipulate packet size and inter-arrival time to make DoH traffic indistinguishable from Web traffic. By implementing these privacy-enhancing measures, the researchers aim to mitigate the risk of DoH traffic being targeted by network adversaries for censorship or monitoring purposes.",
+        section3: [
+          "1. Data Gathering: The researchers collect traffic traces by visiting the top 20,000 websites from Alexa's list using a Docker container with automated scripts. They configure a browser to use popular DoH resolvers like Cloudflare, Google, Quad9, and Clean Browsing, and capture traffic from additional less popular resolvers.",
+          "2. Machine Learning Model: The researchers use machine learning algorithms to build a model that classifies HTTPS traffic into DoH and Web classes based on observable features like packet length. They analyze the effectiveness of the model on diverse traffic traces to assess its accuracy in identifying DoH traffic.",
+          "3. Padding Techniques: To counter the identification model, the researchers evaluate multiple padding techniques that manipulate packet size and time lag between packets. They aim to decrease the detection capability of the model by making DoH traffic appear similar to regular Web traffic.",
+          "4. Evaluation: The researchers rigorously test the identification model and padding techniques on different datasets to measure their effectiveness in protecting the privacy of DoH traffic. They analyze the impact of padding on the model's classification accuracy and assess the feasibility of evading identification by network adversaries. By combining machine learning analysis, data gathering, and privacy-enhancing techniques, the researchers aim to enhance the privacy of DNS-over-HTTPS and mitigate the risks associated with potential identification and censorship by network adversaries."
+        ],
     },
     {
       id: 2,
       title:
         "A large-scale analysis of HTTPS deployments: Challenges, solutions, and recommendations",
-      description: "-----------------",
+      description: "https://content.iospress.com/articles/journal-of-computer-security/jcs200070",
       category: "Improve security of HTTPS",
-      section1: "-----------------",
-      section2: "-----------------.",
-      section3: "-----------------",
+      section1: 
+      "The primary problem addressed in this study is the presence of security vulnerabilities in HTTPS deployments among the top 1 million domains, as ranked by Alexa. Despite the critical importance of HTTPS for secure online communication, many domains are still susceptible to well-known attacks due to improper implementation and outdated protocols. The study aims to identify the extent of these vulnerabilities and assess the security levels of digital certificates used by these domains.",
+      section2: 
+      "To tackle this issue, the study proposes comprehensive solutions including conducting a large-scale analysis of HTTPS implementations to pinpoint domains affected by vulnerabilities and assess certificate security. It advocates raising awareness among domain administrators about the criticality of employing secure protocols and configurations. Additionally, it emphasizes the importance of regular updates to TLS protocols and ongoing monitoring of HTTPS deployments to swiftly address vulnerabilities. Furthermore, the study recommends adopting best practices for HTTPS configurations, such as avoiding self-signed certificates and ensuring correct hostname matching for certificates.",
+      section3: 
+      `The study employs a multi-phase methodology to evaluate HTTPS security:
+1. 	Data Collection:
+Gather data on the top 1 million domains from Alexa.
+Collect HTTPS deployment information, including supported protocols and certificate details.
+2. 	Vulnerability Assessment:
+o	Analyze the collected data to identify domains vulnerable to known attacks, such as RC4, CRIME, POODLE, FREAK, Logjam, and DROWN.
+o	Assess the use of outdated protocols like SSL 2.0, SSL 3.0, TLS 1.0, and TLS 1.1.
+3. 	Certificate Analysis:
+Evaluate the security level of digital certificates used by each domain.
+Check for issues such as expired certificates, hostname mismatches, and self-signed certificates.
+4. 	Categorization and Regional Analysis:
+Categorize domains based on their purpose (e.g., online shopping, banking, educational, government).
+Analyze the distribution of vulnerabilities and certificate issues across different regions (ARIN, RIPE NCC, APNIC, LACNIC, and AFRINIC).
+5. 	Trend Analysis:
+Perform a longitudinal study over three years to observe changes in HTTPS deployment and security practices.
+Identify trends in protocol updates and the reduction of vulnerabilities over time.
+6. 	Reporting and Recommendations:
+Compile and report findings to highlight the current state of HTTPS security.
+Provide recommendations for domain administrators to enhance their HTTPS configurations and mitigate identified vulnerabilities.
+`,
     },
     {
       id: 3,
       title:
         "A Comprehensive Study of DNS Operational Issues by Mining DNS Forums",
-      description: "-----------------",
+      description: "https://ieeexplore.ieee.org/abstract/document/9923919",
       category:
         "Understand Root causes of DNS failure and provide suggestions, Privacy laws",
-      section1: "-----------------",
-      section2: "-----------------.",
-      section3: "-----------------",
+      section1: 
+      "The paper addresses the challenge of understanding DNS operational failures, which can lead to severe consequences like Internet outages. Traditional approaches analyzing DNS logs may not provide a comprehensive view of these failures. The key problem is to gain insights into DNS operational issues at a finer granularity, beyond just DNS queries and responses, by exploring data from DNS forums.",
+      section2: 
+      "The solution proposed in the paper involves mining DNS forums to extract valuable information about DNS operational failures. By analyzing forum posts and replies from users, the researchers aim to categorize and tag the data to identify different types of DNS issues, such as general concerns, issue locations, and record types. This approach offers a unique perspective on understanding the root causes of DNS failures and provides suggestions to mitigate these issues.",
+      section3: 
+      `1. Data Collection: The researchers crawled 4 DNS forums and collected over 10,000 posts and 50,000 replies related to DNS operational issues.
+2. Content Analysis: A new analysis framework was developed to tag forum posts by different categories, such as issue locations and record types, using keyword-based filters.
+3. Unsupervised Learning: The posts were clustered using unsupervised learning techniques like k-means to identify patterns and common themes.
+4. Insights Generation: Through manual analysis of representative posts, the researchers derived insights into the causes and resolutions of DNS operational failures.
+5. Conclusions and Suggestions: The study offers recommendations to DNS service providers and users based on the findings from the forum analysis, aiming to improve the reliability of DNS infrastructure.
+`,
     },
     {
       id: 4,
       title:
         "Empirically understanding the global impact of migration to DNS-over-HTTPS",
-      description: "-----------------",
+      description: "https://www.ideals.illinois.edu/items/118562",
       category:
         "Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53",
-      section1: "-----------------",
-      section2: "-----------------.",
-      section3: "-----------------",
+      section1: 
+      "The primary problem addressed in this study is the lack of a comprehensive global understanding of the performance impact of migrating from legacy DNS (DNS-over-UDP) to DNS-over-HTTPS (DoH). While previous studies have measured the performance of DoH, they have typically been conducted in developed countries with robust internet infrastructure, leaving a significant gap in understanding the global impact, especially in less developed regions. The study aims to fill this gap by comparing the performance of DoH with legacy DNS across various countries and understanding the factors influencing performance variations.",
+      section2: 
+      "-----------------.",
+      section3: 
+      "-----------------",
     },
     {
       id: 5,
@@ -261,7 +301,7 @@ function App() {
     });
   };
   const handleCategorySelect = (category) => {
-    setAboutUsContent([]); 
+    setAboutUsContent([]);
     if (category === "home") {
       setFilteredProblems([]);
     } else {
@@ -312,6 +352,6 @@ function App() {
       <Footer />
     </div>
   );
-              }
+}
 
 export default App;
