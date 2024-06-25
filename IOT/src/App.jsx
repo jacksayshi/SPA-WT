@@ -14,14 +14,37 @@ function App() {
 
   const teamMembersData = [
     // Team members data
-    { name: 'Sowmya Mutya', bannerId: '001303248', email: 'sowmya.mutya@slu.edu' },
-    { name: 'Ashwin Pawar', bannerId: 'B002', email: 'jane.smith@example.com' },
-    { name: 'Sri Tammiraja Karthikeya Santosh Iragavarapu', bannerId: '001289759', email: 'sritammiraja.iragavarapu@slu.edu' },
-    { name: 'Puneeth Anantha', bannerId: '001289752', email: 'puneethchowdary.anantha@slu.edu' },
-    { name: 'Bandlamudi Bharath', bannerId: '001268278', email: 'bandlamudi.bharath@slu.edu' },
-    { name: 'Sai Joshika Gummireddy', bannerId: '001252206', email: 'saijoshika.gummireddy@slu.edu' },
+    {
+      name: "Sowmya Mutya",
+      bannerId: "001303248",
+      email: "sowmya.mutya@slu.edu",
+    },
+    {
+      name: "Ashwin Pawar",
+      bannerId: "001296012",
+      email: "ashwin.pawar@slu.edu",
+    },
+    {
+      name: "Sri Tammiraja Karthikeya Santosh Iragavarapu",
+      bannerId: "001289759",
+      email: "sritammiraja.iragavarapu@slu.edu",
+    },
+    {
+      name: "Puneeth Anantha",
+      bannerId: "001289752",
+      email: "puneethchowdary.anantha@slu.edu",
+    },
+    {
+      name: "Bandlamudi Bharath",
+      bannerId: "001268278",
+      email: "bandlamudi.bharath@slu.edu",
+    },
+    {
+      name: "Sai Joshika Gummireddy",
+      bannerId: "001252206",
+      email: "saijoshika.gummireddy@slu.edu",
+    },
   ];
-  
 
   const problems = [
     {
@@ -274,8 +297,12 @@ function App() {
                 {aboutUsContent.map((member, index) => (
                   <div className="team-member-card" key={index}>
                     <h3>{member.name}</h3>
-                    <p><strong>Banner ID:</strong> {member.bannerId}</p>
-                    <p><strong>Email:</strong> {member.email}</p>
+                    <p>
+                      <strong>Banner ID:</strong> {member.bannerId}
+                    </p>
+                    <p>
+                      <strong>Email:</strong> {member.email}
+                    </p>
                   </div>
                 ))}
               </div>
