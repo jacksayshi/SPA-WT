@@ -4,7 +4,7 @@ import Problems from "./Components/Problems";
 import Footer from "./Components/Footer";
 import TitleAbout from "./Components/TitleAbout";
 import HorizontalNavBar from "./Components/HorizontalNavBar";
-import "./Components/TeamMembers";
+import TeamMembers from "./Components/TeamMembers";
 import "./App.css";
 
 function App() {
@@ -261,6 +261,7 @@ function App() {
     });
   };
   const handleCategorySelect = (category) => {
+    setAboutUsContent([]); 
     if (category === "home") {
       setFilteredProblems([]);
     } else {
@@ -269,7 +270,7 @@ function App() {
       );
       setFilteredProblems(filtered);
     }
-    setSelectedProblem(null); // Reset the selected problem when category changes
+    setSelectedProblem(null);
   };
 
   const handleAboutUsSelect = () => {
@@ -291,24 +292,9 @@ function App() {
         />
         <main className="main-content">
           {aboutUsContent.length > 0 ? (
-            <div>
-              <h2>About Us</h2>
-              <div className="team-members-grid">
-                {aboutUsContent.map((member, index) => (
-                  <div className="team-member-card" key={index}>
-                    <h3>{member.name}</h3>
-                    <p>
-                      <strong>Banner ID:</strong> {member.bannerId}
-                    </p>
-                    <p>
-                      <strong>Email:</strong> {member.email}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <TeamMembers teamMembers={aboutUsContent} />
           ) : (
-            <div>
+            <>
               <TitleAbout />
               <Problems
                 problems={
@@ -319,13 +305,13 @@ function App() {
                 selectedProblem={selectedProblem}
                 onSelectProblem={setSelectedProblem}
               />
-            </div>
+            </>
           )}
         </main>
       </div>
       <Footer />
     </div>
   );
-}
+              }
 
 export default App;

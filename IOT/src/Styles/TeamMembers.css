@@ -18,6 +18,7 @@
   padding: 20px;
   width: 250px;
   text-align: left;
+  overflow:hidden;
 }
 
 .team-member-card h3 {
