@@ -1,0 +1,35 @@
+.about-us {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: left;
+}
+
+.team-member-card h3 {
+  margin-top: 0;
+}
+
+.team-member-card p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .team-member-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+
+
+  .title-about {
+
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+  }
+  
+  .title-about h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .title-about p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
