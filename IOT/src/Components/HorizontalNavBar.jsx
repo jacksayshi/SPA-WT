@@ -27,7 +27,7 @@ const HorizontalNavBar = ({ onCategorySelect, onAboutUsSelect }) => {
           <a href="#" onClick={() => onCategorySelect('Security and Attack Analysis')}>Security and Attack Analysis</a>
         </div>
       </div>
-      <a href="#" onClick={onAboutUsSelect}>About Us</a> {/* Link for About Us */}
+      <a href="#" onClick={onAboutUsSelect}>About Us</a> 
     </div>
   );
 };

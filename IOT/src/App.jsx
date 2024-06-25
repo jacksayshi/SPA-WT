@@ -16,10 +16,10 @@ function App() {
     // Team members data
     { name: 'Sowmya Mutya', bannerId: '001303248', email: 'sowmya.mutya@slu.edu' },
     { name: 'Ashwin Pawar', bannerId: 'B002', email: 'jane.smith@example.com' },
-    { name: 'Santosh Iragavarapu', bannerId: 'B002', email: 'jane.smith@example.com' },
-    { name: 'Puneeth Anantha', bannerId: 'B003', email: 'alice.johnson@example.com' },
-    { name: 'Bharath Bandlamudi', bannerId: 'B002', email: 'jane.smith@example.com' },
-    { name: 'Joshika Gummireddy', bannerId: 'B002', email: 'jane.smith@example.com' },
+    { name: 'Sri Tammiraja Karthikeya Santosh Iragavarapu', bannerId: '001289759', email: 'sritammiraja.iragavarapu@slu.edu' },
+    { name: 'Puneeth Anantha', bannerId: '001289752', email: 'puneethchowdary.anantha@slu.edu' },
+    { name: 'Bandlamudi Bharath', bannerId: '001268278', email: 'bandlamudi.bharath@slu.edu' },
+    { name: 'Sai Joshika Gummireddy', bannerId: '001252206', email: 'saijoshika.gummireddy@slu.edu' },
   ];
   
 
