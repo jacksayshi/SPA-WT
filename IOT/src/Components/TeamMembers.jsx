@@ -1,33 +1,32 @@
-import React, { useState } from 'react';
+
+import PropTypes from 'prop-types';
 import '../Styles/TeamMembers.css';
 
 const TeamMembers = ({ teamMembers }) => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
-
   return (
-    <div className="team-members">
-      <button className="popup-button" onClick={togglePopup}>
-        Team Members
-      </button>
-      {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <h3>Team Members</h3>
-            <ul>
-              {teamMembers.map((member, index) => (
-                <li key={index}>{member.name}</li>
-              ))}
-            </ul>
+    <div className="about-us">
+      <h2>About Us</h2>
+      <div className="team-members-grid">
+        {teamMembers.map((member, index) => (
+          <div className="team-member-card" key={index}>
+            <h3>{member.name}</h3>
+            <p><strong>Banner ID:</strong> {member.bannerId}</p>
+            <p><strong>Email:</strong> {member.email}</p>
           </div>
-          <div className="popup-overlay" onClick={togglePopup}></div>
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
+};
+
+TeamMembers.propTypes = {
+  teamMembers: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      bannerId: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default TeamMembers;

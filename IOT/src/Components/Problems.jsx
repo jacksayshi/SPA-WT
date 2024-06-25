@@ -1,6 +1,3 @@
-
-
-import React from 'react';
 import '../Styles/Problems.css';
 
 const Problems = ({ problems, selectedProblem, onSelectProblem, selectedCategory }) => {

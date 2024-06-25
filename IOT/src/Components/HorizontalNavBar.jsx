@@ -1,11 +1,10 @@
-
-import React from 'react';
+import PropTypes from 'prop-types';
 import '../Styles/HorizontalNavBar.css';
 
-const HorizontalNavBar = ({ onCategorySelect }) => {
+const HorizontalNavBar = ({ onCategorySelect, onAboutUsSelect }) => {
   return (
     <div className="horizontal-navbar">
-        <a href="#" onClick={() => onCategorySelect('home')}>Home</a>
+      <a href="#" onClick={() => onCategorySelect('home')}>Home</a>
       <div className="dropdown">
         <a href="#">Solutions</a>
         <div className="dropdown-content">
@@ -14,7 +13,7 @@ const HorizontalNavBar = ({ onCategorySelect }) => {
           <a href="#" onClick={() => onCategorySelect('Understand Root causes of DNS failure and provide suggestions, Privacy laws')}>Understand Root causes of DNS failure and provide suggestions, Privacy laws</a>
           <a href="#" onClick={() => onCategorySelect('Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53')}>Need for careful consideration of disparities for performance, Comprehensive measurement of DoH and Do53</a>
           <a href="#" onClick={() => onCategorySelect('DNS future scope')}>DNS future scope</a>
-          <a href="#" onClick={() => onCategorySelect('Policy recommendations')}>Policy recommendations </a>
+          <a href="#" onClick={() => onCategorySelect('Policy recommendations')}>Policy recommendations</a>
         </div>
       </div>
       <div className="dropdown">
@@ -28,8 +27,14 @@ const HorizontalNavBar = ({ onCategorySelect }) => {
           <a href="#" onClick={() => onCategorySelect('Security and Attack Analysis')}>Security and Attack Analysis</a>
         </div>
       </div>
+      <a href="#" onClick={onAboutUsSelect}>About Us</a> {/* Link for About Us */}
     </div>
   );
+};
+
+HorizontalNavBar.propTypes = {
+  onCategorySelect: PropTypes.func.isRequired,
+  onAboutUsSelect: PropTypes.func.isRequired,
 };
 
 export default HorizontalNavBar;
