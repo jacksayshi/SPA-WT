@@ -13,7 +13,6 @@ function App() {
   const [aboutUsContent, setAboutUsContent] = useState([]);
 
   const teamMembersData = [
-    // Team members data
     {
       name: "Sowmya Mutya",
       bannerId: "001303248",
