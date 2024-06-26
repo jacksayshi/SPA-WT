@@ -86,6 +86,7 @@ const HorizontalNavBar = ({ onCategorySelect, onAboutUsSelect }) => {
         </div>
       </div>
       <a href="#" onClick={onAboutUsSelect}>About Us</a> 
+      console.log("puneeth");
     </div>
   );
 };

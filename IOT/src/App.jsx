@@ -575,7 +575,7 @@ methodologyCategory:"System Design and Implementation",
         />
         <main className="main-content">
           {aboutUsContent.length > 0 ? (
-            <TeamMembers teamMembers={aboutUsContent} />
+            <TeamMembers teamMembers={aboutUsCsontent} />
           ) : (
             <>
               <TitleAbout />
