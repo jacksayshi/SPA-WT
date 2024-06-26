@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+
+
+
+import React from 'react';
+>>>>>>> Stashed changes
 import '../Styles/Problems.css';
 
 const Problems = ({ problems, selectedProblem, onSelectProblem, selectedCategory }) => {
