@@ -15,7 +15,7 @@ const Problems = ({ problems, selectedProblem, onSelectProblem, selectedCategory
     return (
       <div className="problem-content">
         <h2>{selectedProblem.title}</h2>
-        <p>{selectedProblem.description}</p>
+        <a>{selectedProblem.description}</a>
         <h3>Problem Definition</h3>
         <p>{selectedProblem.section1}</p>
         <h3>Solutions Overview</h3>
@@ -32,7 +32,7 @@ const Problems = ({ problems, selectedProblem, onSelectProblem, selectedCategory
       {filteredProblems.map((problem, idx) => (
         <div key={idx} className="problem-card" onClick={() => onSelectProblem(problem)}>
           <h3>{problem.title}</h3>
-          <p>{problem.description}</p>
+          {/* <a>{problem.description}</a> */}
         </div>
       ))}
     </div>
