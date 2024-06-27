@@ -1,10 +1,10 @@
-
-   .footer {
+.footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: auto;
+  width: 100%; /* Default width for large screens */
 }
 
 .footer p {
@@ -18,4 +18,51 @@
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .footer {
+    width: 90%; /* Adjust width for screens up to 1024px */
+    margin: 0 auto; /* Center the footer */
+    padding: 15px;
+  }
+
+  .footer p {
+    font-size: 0.95em;
+  }
+
+  .footer a {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    width: 100%; /* Adjust width for screens up to 768px */
+    padding: 15px;
+  }
+
+  .footer p {
+    font-size: 0.9em;
+  }
+
+  .footer a {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    width: 100%; /* Full width for screens up to 576px */
+    padding: 10px;
+  }
+
+  .footer p {
+    font-size: 0.8em;
+  }
+
+  .footer a {
+    font-size: 0.8em;
+  }
 }
