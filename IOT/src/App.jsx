@@ -575,7 +575,7 @@ methodologyCategory:"System Design and Implementation",
         />
         <main className="main-content">
           {aboutUsContent.length > 0 ? (
-            <TeamMembers teamMembers={aboutUsCsontent} />
+            <TeamMembers teamMembers={aboutUsContent} />
           ) : (
             <>
               <TitleAbout />
@@ -594,7 +594,7 @@ methodologyCategory:"System Design and Implementation",
       </div>
       <Footer />
     </div>
-  );
-              }
+  );     
+         }
 
 export default App;
