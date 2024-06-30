@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import SideNavbar from "./Components/SideNavBar1";
 import Problems from "./Components/Problems";
 import Footer from "./Components/Footer";
@@ -8,6 +8,16 @@ import TeamMembers from "./Components/TeamMembers";
 import "./App.css";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const [selectedProblem, setSelectedProblem] = useState(null);
   const [filteredProblems, setFilteredProblems] = useState([]);
   const [aboutUsContent, setAboutUsContent] = useState([]);
@@ -862,11 +872,19 @@ methodologyCategory:"System Design and Implementation",
         onAboutUsSelect={handleAboutUsSelect}
       />
       <div className="content-wrapper">
-        <SideNavbar
-          problems={uniqueProblems(problems)}
-          onSelectProblem={setSelectedProblem}
-        />
+        {!isMobile && (
+          <SideNavbar
+            problems={uniqueProblems(problems)}
+            onSelectProblem={setSelectedProblem}
+          />
+        )}
         <main className="main-content">
+          {isMobile && (
+            <SideNavbar
+              problems={uniqueProblems(problems)}
+              onSelectProblem={setSelectedProblem}
+            />
+          )}
           {aboutUsContent.length > 0 ? (
             <TeamMembers teamMembers={aboutUsContent} />
           ) : (
@@ -887,7 +905,7 @@ methodologyCategory:"System Design and Implementation",
       </div>
       <Footer />
     </div>
-  );     
-         }
+  );
+}
 
 export default App;
