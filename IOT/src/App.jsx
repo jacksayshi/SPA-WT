@@ -518,6 +518,299 @@ methodologyCategory:"System Design and Implementation",
 "5. Documentation and Deployment:**Objective**: Provide comprehensive documentation and facilitate deployment.**Activities**:Document the configuration and usage of DoH in Unbound.Prepare deployment guidelines and assist users in transitioning to the new version.Collect and analyze metrics to monitor DoH usage and performance.",
 "6. Monitoring and Maintenance:**Objective**: Maintain the DoH functionality and address any issues.**Activities**:Monitor the use of DoH and gather feedback.Release updates and patches as needed.Continuously explore new features and improvements, such as new media types."],
         },
+      {
+        id: 31,
+        title:"Summary of DNS Over HTTPS Abuse",
+        description: "Summary of DNS Over HTTPS Abuse | IEEE Journals & Magazine | IEEE Xplore",
+        solutionCategory:"Enhancing HTTPS and DNS Security",
+        problemCategory:"Privacy and Security Implications of DoH",
+        methodologyCategory:"Data Collection and Comparative Analysis",
+        section1: "The adoption of DNS over HTTPS (DoH) protocol by the Internet Engineering Task Force aims to enhance privacy by encrypting DNS queries that are typically transmitted in plain text. However, while DoH improves user privacy, it also introduces significant security threats. Malicious actors can leverage DoH to hide their activities, making it difficult for traditional security measures to detect and mitigate these threats. The problem is twofold: 1) understanding how DoH is being abused by threat actors in real-world scenarios and 2) identifying the challenges that need to be addressed to improve security measures against DoH-related threats.",
+      section2: "The solution proposed involves a comprehensive survey and analysis of DoH-related research and real-world abuse scenarios. This includes monitoring DoH traffic in a malware laboratory, analyzing code samples, and summarizing known DoH abuse from public sources. The study aims to categorize DoH abuse into three main types: Command and Control, Covert Multipurpose Channel, and Unaware Usage. By identifying and documenting these abuse cases, the paper calls for more in-depth research on DoH abuse to develop effective security measures.",
+      section3:[
+        "Survey of Existing Research: The study begins with a survey of existing research works related to DNS over HTTPS, highlighting the privacy benefits and potential security threats.",
+
+"2. Real-World Analysis: The research includes observing and analyzing real-world scenarios where DoH is abused. Three specific abuse cases are detailed:",
+   "- Circumventing copyright infringement blocks by resolving domains via DoH.",
+   "- Using DoH for transparent redirections to new locations, bypassing traditional detection.",
+   "- Leveraging DoH in malvertising and spam campaigns to execute arbitrary JavaScript code.",
+"3. Threat Monitoring and Manual Analysis: Extensive threat monitoring in a malware laboratory is conducted, including the manual analysis of code samples to identify and document DoH abuse instances.",
+
+"4. Public Source Analysis: Multiple public sources such as GitHub, VirusTotal, and malware analysis blogs are analyzed to summarize known DoH abuse by malware and proof-of-concept codes.",
+
+"5. Taxonomy of DoH Abuse: The study categorizes known DoH abuse into three categories: Command and Control, Covert Multipurpose Channel, and Unaware Usage, providing a structured understanding of the different ways DoH can be exploited.",
+
+"6. Identification of Research Challenges: Based on the findings, the paper identifies several research challenges that are important for future security research. These challenges aim to guide the network security research community towards addressing the security risks associated with DoH."
+
+      ]
+      },
+      {
+        id: 32,
+        title:"DNS over HTTPS Detection Using Standard Flow Telemetry",
+        description: "https://www.researchgate.net/publication/370740786_DNS_over_HTTPS_Detection_Using_Standard_Flow_Telemetry",
+        solutionCategory:"Machine Learning-Based Detection",
+        problemCategory:"Traffic Analysis and Detection",
+        methodologyCategory:"System Design and Implementation",
+        section1:"The paper addresses the detection of DNS over HTTPS (DoH) traffic using standard flow telemetry. DoH is a protocol that improves user privacy and security by encrypting DNS queries, making it challenging for network administrators to monitor and control DNS traffic. The problem lies in accurately identifying DoH traffic amidst regular HTTPS traffic to maintain network security and management.",
+        section2:[
+          "The paper proposes a heterogeneous detection system combining three different types of detection methods:",
+"IP-based Detection: Utilizes pre-existing knowledge of IP addresses associated with DoH resolvers.",
+"Machine Learning (ML)-based Detection: Employs ML classifiers to identify DoH traffic based on flow characteristics.",
+"Active Probing: Conducts active DNS queries to suspected DoH resolvers to verify their functionality.",
+"These methods are integrated into a feed-forward loop to enhance detection accuracy while minimizing resource consumption and false positives."
+        ],
+        section3: [
+          "The methodology of the proposed DoH detection system includes the following steps:",
+"Flow Stitching: Reconstructs bidirectional flow records from unidirectional records to ensure accurate flow analysis.",
+"IP-based Detection: Uses previously acquired knowledge to identify known DoH resolvers.",
+"Filtration: Prefilters short flows, labeling them as non-DoH if they are too brief for reliable detection.",
+"Classification: Utilizes machine learning to extract features and classify DoH traffic. Detailed descriptions of this step are provided in Section V-C of the paper.",
+"Verification: Conducts active DoH queries to suspected resolvers, confirming their status and updating the blocklist accordingly.",
+"IP Rule Extraction: Processes detection results to maintain and update blocklists and allowlists for IP-based detection."
+        ]
+      },
+      {
+        id: 33,
+        title:"Defragmenting DNS",
+        description: "os3-2020-rp2-defragmenting-dns.pdf (nlnetlabs.nl)",
+        solutionCategory:"Machine Learning-Based Detection",
+        problemCategory:"Performance Impact and Migration Challenges",
+        methodologyCategory:"Implementation and Security/Privacy Analysis",
+        section1:"The primary issue addressed in this paper is the fragmentation of DNS packets caused by discrepancies in Maximum Transmission Unit (MTU) sizes across different networks. DNS relies on the User Datagram Protocol (UDP), which is stateless and does not handle fragmentation effectively. Fragmentation can lead to various problems, including connectivity issues and security vulnerabilities. The goal is to find an optimal maximum EDNS(0) UDP message size to minimize or prevent fragmentation, thus improving DNS performance and reliability.",
+        section2:[
+          "The proposed solution is to determine and recommend optimal EDNS(0) UDP message sizes for both IPv4 and IPv6 environments. This involves measuring the Path MTU (PMTU) that DNS resolvers and stub resolvers encounter on the Internet and using this data to suggest suitable EDNS(0) message sizes that prevent fragmentation. The recommended sizes are:",
+"For internal networks:",
+"IPv4 stub resolvers: 1372 bytes",
+"IPv6 stub resolvers: 1332 bytes",
+"For stub resolvers communicating to resolvers using IPv6:",
+"1232 bytes",
+"For resolvers:",
+"IPv4: 1232 bytes",
+"IPv6: 1332 bytes",
+
+        ],
+        section3:[
+          "The research methodology includes the following steps:",
+"Environment Setup:",
+"Create an environment to serve DNS responses of varying sizes.",
+"Set up infrastructure to measure the PMTU for different DNS queries.",
+"Data Collection:",
+"Query the environment from various points on the Internet to gather data on the PMTU experienced by different resolvers and stub resolvers.",
+"Measure the response sizes that can be successfully transmitted without fragmentation.",
+
+        ]
+
+      },
+      {
+        id: 34,
+        title:"Mitigating DNS Amplification Attacks at the DNS Server: Using BGP AS Paths and Ingress Filtering",
+        description: "(PDF) Mitigating DNS Amplification Attacks at the DNS Server: Using BGP AS Paths and Ingress Filtering (researchgate.net)",
+        solutionCategory:"Detection and Mitigation of DNS Tunneling",
+        problemCategory:"General DNS Vulnerabilities and Attacks",
+        methodologyCategory:"Implementation and Security/Privacy Analysis",
+        section1:"The primary issue addressed in this paper is the vulnerability of DNS servers to distributed denial of service (DDoS) amplification attacks. These attacks exploit the open nature of DNS servers to send large volumes of traffic to a victim's IP address, which is spoofed by the attacker. The amplification effect occurs because DNS responses are much larger than the initial queries, overwhelming the victim's network infrastructure. Traditional mitigation techniques, like rate limiting, are ineffective against these attacks because they involve multiple DNS servers and spoofed source addresses. This paper aims to explore the use of Border Gateway Protocol (BGP) Autonomous System (AS) paths and ingress filtering to mitigate these amplification attacks.",
+        section2:[
+          "The proposed solution involves using BGP AS paths and ingress filtering to detect and mitigate DNS amplification attacks. The key components of the solution are:",
+"Unicast Reverse Path Forwarding (uRPF):",
+"Implementing uRPF to verify that incoming packets have a valid return path.",
+"Using strict uRPF mode for rejecting spoofed packets, although this requires rebooting border routers.",
+"BGP AS Path Information:",
+"Identifying anomalies in BGP AS path information to detect malicious traffic closer to the source.",
+"Ingress filtering based on BGP AS paths to filter out spoofed packets before they reach the DNS server.",
+"The solution is demonstrated using Snort as an Intrusion Detection System (IDS) to capture and analyze DNS request patterns, and MikroTik router configurations for implementing strict uRPF and ingress filtering."
+        ],
+        section3:[
+          "The research methodology includes the following steps:",
+"Environment Setup:",
+"Configuring a research network with Snort IDS for capturing DNS traffic.",
+"Setting up MikroTik routers for implementing uRPF and ingress filtering.",
+"Data Collection:",
+"Capturing DNS request patterns using Snort IDS to identify characteristics of amplification attacks.",
+"Collecting BGP AS path information for analyzing anomalies.",
+"Implementation:",
+"Configuring MikroTik routers for strict uRPF mode and ingress filtering based on BGP AS path information.",
+"Testing the effectiveness of the proposed solution in a controlled network environment.",
+"Analysis:",
+"Evaluating the performance of the proposed solution in detecting and mitigating DNS amplification attacks.",
+"Comparing the effectiveness of uRPF strict mode and ingress filtering."
+        ]
+      },
+      {
+        id: 35,
+        title:"Measurement and Characterization of DNS over HTTPS Traffic",
+        description: "(PDF) Measurement and characterization of DNS over HTTPS traffic (researchgate.net)",
+        solutionCategory:"Performance and Operational Impact",
+        problemCategory:"Performance Impact and Migration Challenges",
+        methodologyCategory:"System Design and Implementation",
+        section1:"The paper addresses the issue of user privacy and security in the context of the Domain Name System (DNS). Traditional DNS queries are transmitted in plain text, exposing user activity to intermediaries like Internet Service Providers (ISPs) and network administrators. DNS-over-HTTPS (DoH) aims to enhance privacy by encrypting DNS queries and responses. However, this encryption introduces overhead, affecting performance. The paper investigates the deployment and performance of DoH implementations to understand the trade-offs between privacy and performance.",
+        section2:[
+          "The paper examines the current state of DoH deployment and its performance impact through several experiments:",
+"Feature Overview: Comparison of DNS, DNS over TLS (DoT), and DoH in terms of privacy, performance, and overhead.",
+"Protocol Implementations Analysis: Evaluation of DoH clients in web browsers and DoH server deployments.",
+"Traffic Measurement: Creation of a dataset of DoH communication to analyze performance and distinguish DoH traffic from regular HTTPS traffic."
+
+        ],
+        section3:[
+          "System Implementation:",
+"DoH Server and Client Testing Tool: A tool developed to detect and test deployed DoH servers on the Internet, providing statistics on their features and availability.",
+"Data Generation: Queries generated using the top one million domains from the Cisco Umbrella dataset, capturing and analyzing the network traffic.",
+"Theoretical Analysis:",
+"Overview of DNS, HTTP(S), and DoH protocols to provide a foundational understanding of their operations and potential performance impacts.",
+"Analysis of the overhead introduced by encrypted transport channels in DoH compared to traditional DNS.",
+"Measurement Study:",
+"Single Query Analysis: Measuring single, isolated DoH requests to estimate the expected overhead compared to traditional DNS.",
+"Performance Parameters: Evaluation of payload size, number of packets, and overall flow duration for different DNS query methods.",
+"Browser Implementation Study: Analysis of DoH implementation in web browsers, including Firefox and Chrome, to measure practical impact on web page load times.",
+"Simulations vs. Real Prototype:",
+"Real-world deployment and testing of DoH servers and clients to gather empirical data on their performance and characteristics.",
+"Comparison of DoH traffic with regular HTTPS traffic to identify distinguishing features and potential classification methods."
+
+        ]
+
+      },
+      {
+        id:36,
+        title:"Using Machine Learning for DNS over HTTPS Detection",
+        description: "Using Machine Learning for DNS over HTTPS Detection - ProQuest",
+        solutionCategory:"Machine Learning-Based Detection",
+        problemCategory:"Traffic Analysis and Detection",
+        methodologyCategory:"Machine Learning and Data Analysis",
+        section1:"The paper addresses the challenge of detecting DNS over HTTPS (DoH) traffic within a network. Traditional DNS transmits queries in plain text, making it easier for network administrators to monitor traffic. However, DoH encrypts DNS queries using HTTPS, complicating traffic logging and monitoring. The paper proposes using machine learning techniques to detect DoH traffic accurately, aiding network management and security.",
+        section2:"The researchers developed a machine learning-based system for automated detection of DoH traffic. This approach leverages advanced firewall capabilities to monitor and classify network traffic efficiently.",
+        section3:[
+          "System Implementation:",
+"Machine Learning Approach: The paper introduces a machine learning framework that utilizes features from network traffic data to detect DoH. This involves collecting data, preprocessing it, extracting relevant features, and training a machine learning model.",
+"Feature Extraction: The features used for detection include various characteristics of the traffic flow, such as packet sizes, inter-arrival times, and other statistical properties of the traffic.",
+"Theoretical Analysis:",
+"DNS Overview: The paper provides an overview of the DNS system and its vulnerabilities due to unencrypted transmission of queries.",
+"DoH Advantages and Disadvantages: Discussion on the benefits of DoH in terms of privacy and the challenges it poses for network monitoring.",
+"Measurement Study:",
+"Dataset Creation: A dataset of DoH and non-DoH traffic is created to train and evaluate the machine learning model. This dataset includes traffic from different sources to ensure diversity and robustness.",
+"Model Training and Evaluation: The machine learning model is trained on the dataset and evaluated using various performance metrics to assess its accuracy and reliability in detecting DoH traffic.",
+"Simulations vs. Real Prototype:",
+"Experimental Setup: Experiments are conducted in a controlled environment to test the performance of the machine learning model in detecting DoH traffic. This includes simulating different network conditions and traffic patterns.",
+"Validation: The model's performance is validated using real-world traffic data to ensure its practical applicability."
+        ]
+      },
+      {
+        id:37,
+        title:"An Explainable AI-based Intrusion Detection System for DNS over HTTPS (DoH) Attacks",
+        description: "(PDF) An Explainable AI-based Intrusion Detection System for DNS over HTTPS (DoH) Attacks (researchgate.net)",
+        solutionCategory:"Performance and Operational Impact",
+        problemCategory:"Detection and Mitigation of DNS Tunneling and Malware",
+        methodologyCategory:"Implementation and Security/Privacy Analysis",
+        section1:"The paper addresses the challenge of detecting and classifying Domain Name System over HTTPS (DoH) attacks. While DoH enhances user privacy and security by encrypting DNS queries, it also poses a significant challenge for network administrators. The encryption prevents the detection of suspicious network traffic, which is exploited by malware and malicious tools. Consequently, this creates a security gap, as traditional DNS-based security measures become ineffective. The goal is to develop an intrusion detection system (IDS) that can accurately identify and classify DoH attacks while providing transparency and explainability in the detection process.",
+        section2:[
+          "The proposed solution is an Explainable AI-based Intrusion Detection System (IDS) specifically designed for detecting and classifying DoH attacks. The key components of the solution are:",
+"Machine Learning Framework:",
+"A novel machine learning model, specifically a balanced and stacked Random Forest, is used for the classification task.",
+"The model is trained and evaluated using the CIRA-CIC-DoHBrw-2020 dataset.",
+"Explainable AI:",
+"Explainable AI methods are integrated to highlight the underlying feature contributions, making the model’s decisions transparent and interpretable.",
+"A model dashboard is implemented to visualize and explain the classification results to human users."
+        ],
+        section3:[
+          "The research methodology includes the following steps:",
+"Data Collection and Preprocessing:",
+"Using the publicly available CIRA-CIC-DoHBrw-2020 dataset.",
+"Preprocessing the dataset to ensure it is suitable for training the machine learning model.",
+"Model Development:",
+"Implementing a balanced and stacked Random Forest model.",
+"Setting up the model architecture and tuning the parameters for optimal performance.",
+"Model Training and Evaluation:",
+"Training the model on the processed dataset.",
+"Evaluating the model’s performance using metrics such as precision, recall, F1 score, and AUC.",
+"Comparing the model’s performance with state-of-the-art ensemble models like gradient boosting and generic random forest.",
+"Explainability:",
+"Applying SHAP (SHapley Additive exPlanations) values to provide explanations for the model’s classification decisions.",
+"Developing a model dashboard to present the explanations and feature contributions in a user-friendly manner.",
+"Performance Analysis:",
+"Analyzing the classification accuracy and the conditions under which high accuracy can be achieved.",
+"Reporting the class-wise accuracy for Benign, Malicious, and Non-DoH traffic.",
+"Future Work:",
+"Exploring the application of explainable DoH detection methods to deep neural network-based solutions.",
+"Investigating the detection of other types of malicious DoH traffic, such as those generated by botnets using Domain Generating Algorithms (DGAs)."
+        ]
+      },
+      {
+        id:38,
+        title:"On the Impact of DNS over HTTPS Paradigm on Cyber Systems",
+        description: "On the Impact of DNS Over HTTPS Paradigm on Cyber Systems | IEEE Conference Publication | IEEE Xplore",
+        solutionCategory:"Enhancing HTTPS and DNS Security",
+        problemCategory:"Privacy and Security Implications of DoH",
+        methodologyCategory:"Survey and Literature Review",
+        section1:"The paper addresses the security challenges posed by the traditional Domain Name System (DNS) protocol, which lacks built-in security mechanisms. This deficiency makes DNS vulnerable to various cyber threats, including data exfiltration and command-and-control (C2) communications by malware. The introduction of DNS over HTTPS (DoH) aims to mitigate some of these security issues by encrypting DNS traffic. However, the new paradigm also presents challenges for network defenders, particularly in detecting and mitigating malware that leverages DoH for malicious purposes.",
+        section2:[
+          "The paper proposes and discusses several enhancements to the traditional DNS protocol to address its security weaknesses:",
+"DNSSEC (DNS Security Extensions): Adds cryptographic verification to DNS records, enhancing the integrity of DNS responses.",
+"Query Name Minimization: Limits the amount of information sent in DNS queries to protect user privacy.",
+"DNS over TLS (DoT): Encrypts DNS traffic using TLS, improving confidentiality and integrity.",
+"DNS over HTTPS (DoH): Encrypts DNS traffic within HTTPS, providing additional confidentiality and blending DNS traffic with regular web traffic to make it less detectable."
+        ],
+        section3:[
+          "The methodology involves a comprehensive literature review and experimental analysis:",
+"Literature Review: The paper reviews the weaknesses of the DNS protocol, the enhancements developed to address these weaknesses, and the methods used by malware to exploit DNS. It also reviews existing malware detection techniques and their applicability to encrypted DNS traffic.",
+"Experimental Setup: The authors created a test environment to analyze DoH traffic. They used a CentOS 8 virtual machine with a DoH proxy to generate and capture DoH queries. The experiment involved sending DoH queries using HTTP GET and POST methods and analyzing the packet captures to evaluate the visibility of various features used in traditional DNS traffic analysis.",
+"Detection Methods Analysis: The study compares the effectiveness of traditional DNS-based malware detection methods when applied to DoH traffic. It highlights the challenges posed by encryption, which obscures many of the features used in existing detection techniques."
+        ]
+      },
+      {
+        id:39,
+        title:" Oblivious DNS over HTTPS (ODoH): A Practical Privacy Enhancement to DNS",
+        description: "(PDF) Oblivious DNS over HTTPS (ODoH): A Practical Privacy Enhancement to DNS (researchgate.net)",
+        solutionCategory:"Enhancing HTTPS and DNS Security",
+        problemCategory:"Privacy and Security Implications of DoH",
+        methodologyCategory:"System Design and Implementation",
+        section1:"The primary issue addressed in this paper is the privacy vulnerability of traditional DNS, which transmits queries in cleartext over UDP, making it susceptible to eavesdropping, modification, and other privacy risks. While secure DNS variants like DNS over TLS (DoT) and DNS over HTTPS (DoH) encrypt DNS messages, they do not prevent DNS operators from linking query contents with client IP addresses. This paper focuses on enhancing DNS privacy by decoupling queries from client IP addresses, making it impossible for DNS resolvers to link activities with identities.",
+        section2:[
+          "The proposed solution is Oblivious DNS over HTTPS (ODoH), which extends DoH by encrypting DNS queries and responses in a way that separates the client’s identity from the query content. The ODoH protocol works by:",
+"Encrypting queries at the stub resolver into HTTP messages.",
+"Forwarding these encrypted queries through an Oblivious HTTPS Proxy.",
+"Having an Oblivious Target decrypt and resolve the queries, then encrypt the responses.",
+"Sending the encrypted responses back to the client through the proxy. This ensures that the DNS resolver cannot see both the query content and the client’s IP address, significantly enhancing privacy."
+
+        ],
+        section3:[
+          "The research methodology includes the following steps:",
+"Implementation:",
+"Developed public, open-source, and interoperable implementations of the ODoH components.",
+"Formal Modeling and Analysis:",
+"Modeled ODoH using the Tamarin prover to provide a formal analysis of its security properties.",
+"Identified and addressed a latent replay attack during this analysis.",
+"Performance Evaluation:",
+"Deployed ODoH at a large DNS resolver.",
+"Conducted wide-area measurements to evaluate ODoH’s performance compared to other privacy-preserving DNS variants (e.g., DNSCrypt and DoH over Tor).",
+"Analyzed the impact on page-load times and overall performance."
+        ]
+      },
+      {
+        id:40,
+        title:"Performance of DNS Over HTTPS Implementation on Low-Power Devices",
+        description: "Performance of DNS Over HTTPS Implementation on Low-Power Devices (researchgate.net)",
+        solutionCategory:"Enhancing HTTPS and DNS Security",
+        problemCategory:"Detection and Mitigation of DNS Tunneling and Malware",
+        methodologyCategory:"Data Collection and Comparative Analysis",
+        section1:"The main problem addressed in this paper is the vulnerability of traditional DNS communication to monitoring, interception, and manipulation, given its unencrypted nature. This issue is particularly relevant in contexts where privacy and security are paramount, such as preventing website blocking or DNS redirection by ISPs, system administrators, or attackers. The focus is on implementing DNS over HTTPS (DoH) on low-power devices to enhance the security of DNS communications, and evaluating the performance of this implementation in comparison to traditional unencrypted DNS and other DoH implementations.",
+        section2:"The proposed solution involves implementing DNS over HTTPS (DoH) on low-power devices, specifically using a Raspberry Pi, to secure DNS communications. The solution also includes a performance evaluation of this implementation by measuring the speed of responses to uncached DNS requests. This performance is compared to other open-source and commercial DoH implementations as well as traditional unencrypted DNS communication.",
+        section3:[
+          "Implementation:",
+"Set up DNS over HTTPS (DoH) on a low-power device (e.g., Raspberry Pi).",
+"Configure the device to handle DNS queries over HTTPS, ensuring secure and encrypted communication.",
+"Performance Evaluation:",
+"Design experiments to measure the response time for uncached DNS requests.",
+"Conduct these experiments using the Raspberry Pi implementation of DoH.",
+"Gather data on response times for uncached DNS requests using other open-source and commercial DoH implementations.",
+"Also, collect data on response times using traditional unencrypted DNS communication for comparison.",
+"Comparison and Analysis:",
+"Analyze the collected data to compare the performance of the Raspberry Pi DoH implementation against other DoH solutions and traditional DNS.",
+"Evaluate the feasibility and efficiency of using low-power devices for secure DNS communication.",
+"Results and Recommendations:",
+"Present the performance results, highlighting the speed and efficiency of the Raspberry Pi DoH implementation.",
+"Discuss the implications of using low-power devices for DNS security in real-world scenarios.",
+"Provide recommendations for deploying DoH on low-power devices based on the findings."
+
+        ]
+      }
     
   ];
 
