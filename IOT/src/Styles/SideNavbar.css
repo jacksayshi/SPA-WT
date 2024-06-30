@@ -1,6 +1,6 @@
 
 .side-navbar {
-  max-width: 400px;
+  width: 400px;
   background-color: #33373b;
   padding: 20px;
   height: 100vh;
@@ -9,7 +9,7 @@
   left: 0;
   top: 0;
   color: #fff;
-  box-sizing: border-box;
+  z-index: 1000;
 }
 
 .side-navbar h2 {
@@ -63,18 +63,7 @@
     display: none; /* Hide the sidebar on mobile devices */
   }
 }
-.side-navbar {
-  width: 400px;
-  background-color: #33373b;
-  padding: 20px;
-  height: 100vh;
-  overflow-y: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  color: #fff;
-  z-index: 1000;
-}
+
 
 @media (max-width: 768px) {
   .side-navbar {
